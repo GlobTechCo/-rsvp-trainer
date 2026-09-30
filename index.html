@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RSVP Trainer — Швидке читання</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<header><div><span class="eyebrow">RSVP READING TRAINER</span><h1>Тренажер швидкого читання</h1><p>Читайте по одному слову в центрі екрана. Підберіть комфортний темп і поступово збільшуйте швидкість.</p></div><button id="themeBtn" class="icon" aria-label="Тема">☾</button></header>
+<section class="card reader"><div class="reader-top"><span id="status">Готово</span><span id="progress">0 / 0</span></div><div id="word">Готові?</div><div class="controls"><button id="play">▶ Старт</button><button id="pause" disabled>Ⅱ Пауза</button><button id="reset">↺ Скинути</button></div><div class="speed"><label>Швидкість: <b id="wpm">300</b> сл/хв</label><input id="speed" type="range" min="60" max="1200" step="10" value="300"><div class="ticks"><span>60</span><span>300</span><span>600</span><span>900</span><span>1200</span></div></div></section>
+<section class="grid"><div class="card"><h2>Текст</h2><textarea id="text" placeholder="Вставте текст для тренування...">Швидке читання — це навичка, яку можна розвивати регулярною практикою. RSVP показує слова послідовно в одному місці, допомагаючи зменшити зайві рухи очей і тримати стабільний темп. Починайте з комфортної швидкості, а потім поступово її збільшуйте.</textarea><div class="row"><button id="sample">Приклад</button><button id="clear">Очистити</button></div></div>
+<div class="card"><h2>Налаштування</h2><label class="check"><input id="punct" type="checkbox" checked> Робити паузу на розділових знаках</label><label class="check"><input id="long" type="checkbox" checked> Довше показувати довгі слова</label><label>Розмір слова <input id="size" type="range" min="32" max="96" value="64"></label><p class="hint">Клавіші: Space — старт/пауза, R — скинути.</p></div></section>
+<section class="stats"><div><b id="wordsStat">0</b><span>слів</span></div><div><b id="timeStat">0:00</b><span>час</span></div><div><b id="speedStat">300</b><span>слів/хв</span></div><div><b id="sessionStat">0</b><span>сесій</span></div></section>
+<footer>RSVP Trainer · локальна робота в браузері · прогрес зберігається на цьому пристрої</footer>
+</main><script src="app.js"></script></body></html>
